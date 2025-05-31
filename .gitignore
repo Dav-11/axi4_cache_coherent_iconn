@@ -1,0 +1,12 @@
+# MacOS
+.DS_Store
+
+# IDEs
+.vscode
+.idea
+.fleet
+
+# deps
+venv
+iverilog
+
