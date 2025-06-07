@@ -1,5 +1,7 @@
 package axi4_pkg;
 
+    import params_pkg::*;
+
     // -----------------------------------------------------------
     //  AXI4 Type Definitions
     // -----------------------------------------------------------
@@ -78,14 +80,10 @@ package axi4_pkg;
 
 
     // -----------------------------------------------------------
-    //  AXI4 Interfaces Definitions
+    //  AXI4 Channels Definitions
     // -----------------------------------------------------------
 
-    interface axi4_aw_if #(
-        parameter ADDR_WIDTH = 32,
-        parameter ID_WIDTH   = 4,
-        parameter USER_WIDTH = 0
-    );
+    interface axi4_aw_if;
 
         // AW Channel Signals
         logic   [ID_WIDTH-1:0]      id;
