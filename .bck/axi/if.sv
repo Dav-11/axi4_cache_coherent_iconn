@@ -1,3 +1,5 @@
+package axi_if_pkg;
+
 interface axi4_aw_if (input logic aclk, input logic arst_n);
 
     // AW Channel Signals
@@ -27,7 +29,7 @@ interface axi4_aw_if (input logic aclk, input logic arst_n);
 
 endinterface: axi4_aw_if
 
-interface axi4_w_if;
+interface axi4_w_if (input logic aclk, input logic arst_n);
 
     logic   [ID_WIDTH-1:0]      id;
     logic   [DATA_WIDTH-1:0]    data;
@@ -49,10 +51,7 @@ interface axi4_w_if;
 
 endinterface: axi4_w_if
 
-interface axi4_b_if #(
-    parameter ID_WIDTH   = 4,
-    parameter USER_WIDTH = 0
-);
+interface axi4_b_if (input logic aclk, input logic arst_n);
 
     logic   [ID_WIDTH-1:0]      id;
     axi_resp                    resp;
@@ -72,4 +71,4 @@ interface axi4_b_if #(
 
 endinterface: axi4_b_if
 
-endpackage: axi4_pkg
+endpackage: axi_if_pkg
