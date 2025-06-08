@@ -33,39 +33,39 @@ typedef enum logic [2:0] {
 } axi_burst_size;
 
 typedef enum logic[3:0] {
-    DEV_NON_BUFFERABLE                  = 4'b0000,
-    DEV_BUFFERABLE                      = 4'b0001,
+    DEV_NON_BUFFERABLE_AW                  = 4'b0000,
+    DEV_BUFFERABLE_AW                      = 4'b0001,
 
-    NORMAL_NC_NBUF                      = 4'b0010, // Normal Non-cacheable Non-bufferable
-    NORMAL_NC_BUF                       = 4'b0011, // Normal Non-cacheable Bufferable
+    NORMAL_NC_NBUF_AW                      = 4'b0010, // Normal Non-cacheable Non-bufferable
+    NORMAL_NC_BUF_AW                       = 4'b0011, // Normal Non-cacheable Bufferable
 
-    WRITE_THROUGH_NO_ALLOCATE           = 4'b0110,
-    WRITE_THROUGH_READ_ALLOCATE         = 4'b0110,
-    WRITE_THROUGH_WRITE_ALLOCATE        = 4'b1110,
-    WRITE_THROUGH_READ_WRITE_ALLOCATE   = 4'b1110,
+    WRITE_THROUGH_NO_ALLOCATE_AW           = 4'b0110,
+    WRITE_THROUGH_READ_ALLOCATE_AW         = 4'b0110,
+    WRITE_THROUGH_WRITE_ALLOCATE_AW        = 4'b1110,
+    WRITE_THROUGH_READ_WRITE_ALLOCATE_AW   = 4'b1110,
 
-    WRITE_BACK_NO_ALLOCATE              = 4'b0111,
-    WRITE_BACK_READ_ALLOCATE            = 4'b0111,
-    WRITE_BACK_WRITE_ALLOCATE           = 4'b1111,
-    WRITE_BACK_READ_WRITE_ALLOCATE      = 4'b1111
+    WRITE_BACK_NO_ALLOCATE_AW              = 4'b0111,
+    WRITE_BACK_READ_ALLOCATE_AW            = 4'b0111,
+    WRITE_BACK_WRITE_ALLOCATE_AW           = 4'b1111,
+    WRITE_BACK_READ_WRITE_ALLOCATE_AW      = 4'b1111
 } axi_aw_cache;
 
 typedef enum logic[3:0] {
-    DEV_NON_BUFFERABLE                  = 4'b0000,
-    DEV_BUFFERABLE                      = 4'b0001,
+    DEV_NON_BUFFERABLE_AR                  = 4'b0000,
+    DEV_BUFFERABLE_AR                      = 4'b0001,
 
-    NORMAL_NC_NBUF                      = 4'b0010, // Normal Non-cacheable Non-bufferable
-    NORMAL_NC_BUF                       = 4'b0011, // Normal Non-cacheable Bufferable
+    NORMAL_NC_NBUF_AR                      = 4'b0010, // Normal Non-cacheable Non-bufferable
+    NORMAL_NC_BUF_AR                       = 4'b0011, // Normal Non-cacheable Bufferable
 
-    WRITE_THROUGH_NO_ALLOCATE           = 4'b1010,
-    WRITE_THROUGH_READ_ALLOCATE         = 4'b1110,
-    WRITE_THROUGH_WRITE_ALLOCATE        = 4'b1010,
-    WRITE_THROUGH_READ_WRITE_ALLOCATE   = 4'b1110,
+    WRITE_THROUGH_NO_ALLOCATE_AR           = 4'b1010,
+    WRITE_THROUGH_READ_ALLOCATE_AR         = 4'b1110,
+    WRITE_THROUGH_WRITE_ALLOCATE_AR        = 4'b1010,
+    WRITE_THROUGH_READ_WRITE_ALLOCATE_AR   = 4'b1110,
 
-    WRITE_BACK_NO_ALLOCATE              = 4'b1011,
-    WRITE_BACK_READ_ALLOCATE            = 4'b1111,
-    WRITE_BACK_WRITE_ALLOCATE           = 4'b1011,
-    WRITE_BACK_READ_WRITE_ALLOCATE      = 4'b1111
+    WRITE_BACK_NO_ALLOCATE_AR              = 4'b1011,
+    WRITE_BACK_READ_ALLOCATE_AR            = 4'b1111,
+    WRITE_BACK_WRITE_ALLOCATE_AR           = 4'b1011,
+    WRITE_BACK_READ_WRITE_ALLOCATE_AR      = 4'b1111
 } axi_ar_cache;
 
 // Bit [2] is Privileged/Unprivileged
@@ -95,5 +95,5 @@ typedef enum logic  [3:0] {
     CLEAN_INVALID           = 4'b1001,
     MAKE_INVALID            = 4'b1101,
     DVM_COMPLETE            = 4'b1110,
-    DVM_MESSAGE             = 4'b1111,
+    DVM_MESSAGE             = 4'b1111
 } ace_ac_snoop;

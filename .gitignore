@@ -5,8 +5,8 @@
 .vscode
 .idea
 .fleet
+.venv
 
 # deps
 venv
 iverilog
-
