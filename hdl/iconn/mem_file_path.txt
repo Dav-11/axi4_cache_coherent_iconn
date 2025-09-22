@@ -1,0 +1,1 @@
+/home/aguarisco/mem_init/x86/ubuntu/cl_64/water-spatial_2.mem

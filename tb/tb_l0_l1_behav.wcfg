@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_l0_l1_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="param_pkg" />
+            <top_module name="tb_l0_l1" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="12.169 ns"></ZoomEndTime>
+      <Cursor1Time time="2.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="211"></NameColumnWidth>
+      <ValueColumnWidth column_width="105"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject type="logic" fp_name="/tb_l0_l1/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_l0_l1/resetn">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/req_m2dbiu">
+      <obj_property name="ElementShortName">req_m2dbiu[1:0]</obj_property>
+      <obj_property name="ObjectShortName">req_m2dbiu[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/adr_m2dbiu_flat">
+      <obj_property name="ElementShortName">adr_m2dbiu_flat[63:0]</obj_property>
+      <obj_property name="ObjectShortName">adr_m2dbiu_flat[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/dat_m2dbiu_flat">
+      <obj_property name="ElementShortName">dat_m2dbiu_flat[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dat_m2dbiu_flat[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/we_m2dbiu">
+      <obj_property name="ElementShortName">we_m2dbiu[1:0]</obj_property>
+      <obj_property name="ObjectShortName">we_m2dbiu[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/sel_m2dbiu_flat">
+      <obj_property name="ElementShortName">sel_m2dbiu_flat[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_m2dbiu_flat[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/dat_dbiu2m_flat">
+      <obj_property name="ElementShortName">dat_dbiu2m_flat[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dat_dbiu2m_flat[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/ack_dbiu2m">
+      <obj_property name="ElementShortName">ack_dbiu2m[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ack_dbiu2m[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/HALF_CLK">
+      <obj_property name="ElementShortName">HALF_CLK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HALF_CLK[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_l0_l1/WORD_ADDR">
+      <obj_property name="ElementShortName">WORD_ADDR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">WORD_ADDR[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group635">
+      <obj_property name="label">CC_0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/resetn">
+         <obj_property name="ElementShortName">resetn</obj_property>
+         <obj_property name="ObjectShortName">resetn</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group821">
+         <obj_property name="label">fsm_c</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/c_state_r">
+            <obj_property name="ElementShortName">c_state_r[3:0]</obj_property>
+            <obj_property name="ObjectShortName">c_state_r[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/c_state_next">
+            <obj_property name="ElementShortName">c_state_next[3:0]</obj_property>
+            <obj_property name="ObjectShortName">c_state_next[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /req_m2dbiu">
+            <obj_property name="ElementShortName">req_m2dbiu</obj_property>
+            <obj_property name="ObjectShortName">req_m2dbiu</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/valid_a2c">
+            <obj_property name="ElementShortName">valid_a2c</obj_property>
+            <obj_property name="ObjectShortName">valid_a2c</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/ready_a2c">
+            <obj_property name="ElementShortName">ready_a2c</obj_property>
+            <obj_property name="ObjectShortName">ready_a2c</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/we_m2dbiu">
+            <obj_property name="ElementShortName">we_m2dbiu</obj_property>
+            <obj_property name="ObjectShortName">we_m2dbiu</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/ack_dbiu2m">
+            <obj_property name="ElementShortName">ack_dbiu2m</obj_property>
+            <obj_property name="ObjectShortName">ack_dbiu2m</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/adr_m2dbiu">
+            <obj_property name="ElementShortName">adr_m2dbiu[31:0]</obj_property>
+            <obj_property name="ObjectShortName">adr_m2dbiu[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/sel_m2dbiu">
+            <obj_property name="ElementShortName">sel_m2dbiu[7:0]</obj_property>
+            <obj_property name="ObjectShortName">sel_m2dbiu[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/dat_m2dbiu">
+            <obj_property name="ElementShortName">dat_m2dbiu[63:0]</obj_property>
+            <obj_property name="ObjectShortName">dat_m2dbiu[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/transaction_c2a">
+            <obj_property name="ElementShortName">transaction_c2a[2:0]</obj_property>
+            <obj_property name="ObjectShortName">transaction_c2a[2:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/wrLinePtr">
+            <obj_property name="ElementShortName">wrLinePtr[1:0]</obj_property>
+            <obj_property name="ObjectShortName">wrLinePtr[1:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/tag_dout">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">tag_dout[97:0]</obj_property>
+            <obj_property name="ObjectShortName">tag_dout[97:0]</obj_property>
+            <obj_property name="label">tag_dout[97:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/tagWay_valid_out">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">tagWay_valid_out[3:0]</obj_property>
+            <obj_property name="ObjectShortName">tagWay_valid_out[3:0]</obj_property>
+            <obj_property name="label">tagWay_valid_out[wrLinePtr]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_c/tagWay_dirty_out">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">tagWay_dirty_out[3:0]</obj_property>
+            <obj_property name="ObjectShortName">tagWay_dirty_out[3:0]</obj_property>
+            <obj_property name="label">tagWay_dirty_out[wrLinePtr]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group853">
+         <obj_property name="label">fsm_a</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_a/a_state_r">
+            <obj_property name="ElementShortName">a_state_r[3:0]</obj_property>
+            <obj_property name="ObjectShortName">a_state_r[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_a/a_state_next">
+            <obj_property name="ElementShortName">a_state_next[3:0]</obj_property>
+            <obj_property name="ObjectShortName">a_state_next[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_a/ready_a2c">
+            <obj_property name="ElementShortName">ready_a2c</obj_property>
+            <obj_property name="ObjectShortName">ready_a2c</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_a/valid_c2a">
+            <obj_property name="ElementShortName">valid_c2a</obj_property>
+            <obj_property name="ObjectShortName">valid_c2a</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[0].l1_controller_inst /inst0_a/mshr_full_o">
+            <obj_property name="ElementShortName">mshr_full_o</obj_property>
+            <obj_property name="ObjectShortName">mshr_full_o</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group634">
+      <obj_property name="label">CC_1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[1].l1_controller_inst /inst0_c/c_state_r">
+         <obj_property name="ElementShortName">c_state_r[3:0]</obj_property>
+         <obj_property name="ObjectShortName">c_state_r[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[1].l1_controller_inst /adr_m2dbiu">
+         <obj_property name="ElementShortName">adr_m2dbiu[31:0]</obj_property>
+         <obj_property name="ObjectShortName">adr_m2dbiu[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[1].l1_controller_inst /sel_m2dbiu">
+         <obj_property name="ElementShortName">sel_m2dbiu[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sel_m2dbiu[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_l0_l1/dut/\l1[1].l1_controller_inst /dat_m2dbiu">
+         <obj_property name="ElementShortName">dat_m2dbiu[63:0]</obj_property>
+         <obj_property name="ObjectShortName">dat_m2dbiu[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_l0_l1/dut/\l1[1].l1_controller_inst /we_m2dbiu">
+         <obj_property name="ElementShortName">we_m2dbiu</obj_property>
+         <obj_property name="ObjectShortName">we_m2dbiu</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

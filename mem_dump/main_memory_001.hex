@@ -1,0 +1,21 @@
+// This is a comment line and will be ignored by $readmemh
+// Each line represents a memory location.
+// Values can be 32-bit hexadecimal numbers.
+// Blank lines are ignored.
+// Addresses can be explicitly defined using @
+// If no address is specified, it increments sequentially from the last one.
+
+A000_0001
+B000_0002
+C000_0003
+D000_0004
+// You can skip lines or define specific addresses
+@0010
+DEADBEEF
+@0012
+C0FFEE11
+// Values can be shorter than the memory width, they will be zero-padded on the left
+1234
+5678
+9ABC
+DEF0
