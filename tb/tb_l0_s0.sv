@@ -2,7 +2,7 @@
 
 import param_pkg::*;
 
-module tb_l0_l1 ();
+module tb_l0_s0 ();
 
   parameter int HALF_CLK = 1;
 
@@ -56,8 +56,6 @@ module tb_l0_l1 ();
     // assert reset
     resetn <= '0;
 
-    // $monitor("Time: %d, resetn: %b, req_m2dbiu: %b, adr_m2dbiu_flat: %b, dat_m2dbiu_flat: %b, we_m2dbiu: %b, sel_m2dbiu_flat: %b", $time, resetn, req_m2dbiu, adr_m2dbiu_flat, dat_m2dbiu_flat, we_m2dbiu, sel_m2dbiu_flat);
-
     #4
 
     // unassert reset
@@ -76,7 +74,7 @@ module tb_l0_l1 ();
     adr_m2dbiu_flat[0*DBUS_AW+:DBUS_AW] <= WORD_ADDR;
 
     // sets all bytes used by cpu0 to 1
-    sel_m2dbiu_flat[0*DBUS_ISEL +: DBUS_ISEL] <= {DBUS_ISEL{1'b1}};
+    sel_m2dbiu_flat[0*DBUS_ISEL+:DBUS_ISEL] <= {DBUS_ISEL{1'b1}};
 
 
     wait (ack_dbiu2m[0] == 1'b1);
@@ -87,30 +85,39 @@ module tb_l0_l1 ();
 
     // unassert signals
     req_m2dbiu[0] <= 1'b0;
-    we_m2dbiu[0]    <= 1'b0;
-    adr_m2dbiu_flat[0*DBUS_AW +: DBUS_AW] <= '0;
-    sel_m2dbiu_flat[0*DBUS_ISEL +: DBUS_ISEL] <= {DBUS_ISEL{1'b0}};
+    we_m2dbiu[0] <= 1'b0;
+    adr_m2dbiu_flat[0*DBUS_AW+:DBUS_AW] <= '0;
+    sel_m2dbiu_flat[0*DBUS_ISEL+:DBUS_ISEL] <= {DBUS_ISEL{1'b0}};
 
-    $display("--------------------------------------------------");
-    $display("[T: %0d] Starting Load from CPU 1", $time);
+    #2
 
-    req_m2dbiu[1] <= 1'b1;
-    we_m2dbiu[1] <= 1'b0;
-    adr_m2dbiu_flat[1*DBUS_AW+:DBUS_AW] <= WORD_ADDR;
+    // start store from CPU 0
+    $display(
+        "--------------------------------------------------"
+    );
+    $display("[T: %0d] Starting Store from CPU 0", $time);
 
-    // sets all bytes index used by cpu1 to 1
-    sel_m2dbiu_flat[1*DBUS_ISEL +: DBUS_ISEL] <= {DBUS_ISEL{1'b1}};
+    req_m2dbiu[0] <= 1'b1;
+    we_m2dbiu[0] <= 1'b1;  // STORE
+    adr_m2dbiu_flat[0*DBUS_AW+:DBUS_AW] <= WORD_ADDR;
+
+    // data to write
+    dat_m2dbiu_flat[0*DBUS_DW+:DBUS_DW] <= 64'hFFFF_FFFF_FFFF_FFFF;
+
+    // sets all bytes used by cpu0 to 1
+    sel_m2dbiu_flat[0*DBUS_ISEL+:DBUS_ISEL] <= {DBUS_ISEL{1'b1}};
 
 
-    wait (ack_dbiu2m[1] == 1'b1);
-    $display("[T: %0d] Load Acknowledged for CPU 1. Data received: %h", $time,
-             dat_dbiu2m_flat[1*DBUS_DW+:DBUS_DW]);
+    wait (ack_dbiu2m[0] == 1'b1);
+    $display("[T: %0d] Store Acknowledged for CPU 0. Data written: %h", $time,
+             dat_m2dbiu_flat[0*DBUS_DW+:DBUS_DW]);
+
 
     #2
 
     // unassert signals
-    req_m2dbiu[1] <= 1'b0;
-    we_m2dbiu[1]    <= 1'b0;
+    req_m2dbiu[0] <= 1'b0;
+    we_m2dbiu[0]    <= 1'b0;
     adr_m2dbiu_flat[1*DBUS_AW +: DBUS_AW] <= '0;
     sel_m2dbiu_flat[1*DBUS_ISEL +: DBUS_ISEL] <= {DBUS_ISEL{1'b0}};
 
