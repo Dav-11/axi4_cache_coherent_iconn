@@ -1,4 +1,5 @@
 import func_param_pkg::*;
+import param_pkg::*;
 import clock_pkg::*;
 typedef class RandomTester;
 typedef class bridge_cpu;
@@ -185,8 +186,6 @@ class RandomTester;
             m_last_progress_vector[i] = 0;
         end
     endfunction
-
-
 
     //add cpu bridge to the tester
     function void addCpuBridge(bridge_cpu cpu_bridge, int cpu_id);

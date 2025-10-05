@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_random_system_noif_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_func_param_pkg_sv_1445950126 " />
+            <top_module name="clock_pkg" />
+            <top_module name="func_param_pkg" />
+            <top_module name="glbl" />
+            <top_module name="message_pkg" />
+            <top_module name="param_pkg" />
+            <top_module name="tb_random_system_noif" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="141.290 ns"></ZoomEndTime>
+      <Cursor1Time time="500,050.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="268"></NameColumnWidth>
+      <ValueColumnWidth column_width="159"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject type="logic" fp_name="/tb_random_system_noif/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_random_system_noif/resetn">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group44">
+      <obj_property name="label">CC0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/req_m2dbiu[0]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">req_m2dbiu[0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/system_random_inst/we_m2dbiu[0]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">we_m2dbiu[0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/adr_m2dbiu[0]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+         <obj_property name="label">adr_m2dbiu[0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/sel_m2dbiu[0]">
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/dat_dbiu2m[0]">
+         <obj_property name="ElementShortName">[0][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/ack_dbiu2m[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/system_random_inst/\l1[0].l1_controller_inst /inst0_a/transaction_c2a">
+         <obj_property name="ElementShortName">transaction_c2a[2:0]</obj_property>
+         <obj_property name="ObjectShortName">transaction_c2a[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/system_random_inst/\l1[0].l1_controller_inst /inst0_a/transient_state_r">
+         <obj_property name="ElementShortName">transient_state_r[2:0]</obj_property>
+         <obj_property name="ObjectShortName">transient_state_r[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/system_random_inst/\l1[0].l1_controller_inst /inst0_a/a_state_r">
+         <obj_property name="ElementShortName">a_state_r[3:0]</obj_property>
+         <obj_property name="ObjectShortName">a_state_r[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group45">
+      <obj_property name="label">CC1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/req_m2dbiu[1]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+         <obj_property name="label">req_m2dbiu[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/system_random_inst/we_m2dbiu[1]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+         <obj_property name="label">we_m2dbiu[1]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/adr_m2dbiu[1]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+         <obj_property name="label">adr_m2dbiu[1][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/sel_m2dbiu[1]">
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/dat_dbiu2m[1]">
+         <obj_property name="ElementShortName">[1][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/ack_dbiu2m[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group46">
+      <obj_property name="label">CC2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/req_m2dbiu[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+         <obj_property name="label">req_m2dbiu[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/system_random_inst/we_m2dbiu[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+         <obj_property name="label">we_m2dbiu[2]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/adr_m2dbiu[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="label">adr_m2dbiu[2][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/sel_m2dbiu[2]">
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/dat_dbiu2m[2]">
+         <obj_property name="ElementShortName">[2][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/ack_dbiu2m[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group47">
+      <obj_property name="label">CC3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/req_m2dbiu[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+         <obj_property name="label">req_m2dbiu[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/system_random_inst/we_m2dbiu[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+         <obj_property name="label">we_m2dbiu[3]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/adr_m2dbiu[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="label">adr_m2dbiu[3][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/sel_m2dbiu[3]">
+         <obj_property name="ElementShortName">[3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_random_system_noif/dat_dbiu2m[3]">
+         <obj_property name="ElementShortName">[3][63:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_random_system_noif/ack_dbiu2m[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group560">
+      <obj_property name="label">DIR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

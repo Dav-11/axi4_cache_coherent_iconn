@@ -16,9 +16,9 @@ module fsm_l_noif (
     output logic [N_CPU-1:0][RESP_WIDTH-1:0]  r_resp,
     output logic [N_CPU-1:0][ID_WIDTH-1:0]    r_id,
     output logic [N_CPU-1:0][DATA_WIDTH-1:0]  r_data,
-    
+
     input [N_CPU-1:0] r_ready,
-    
+
     input rack,
     input ar_empty_i,
     input cr_empty_i,
@@ -89,7 +89,7 @@ generate
         assign snoopPtr_vect[i] = (masked_sharers[i]) ? i : snoopPtr_vect[i-1];
     end
     assign snoopPtr = snoopPtr_vect[N_CPU-1];
-endgenerate 
+endgenerate
 
 always_comb begin
     sharers_mask = '1;
@@ -219,7 +219,7 @@ always_comb begin
                 end
             end
         end
-        WAIT_SNOOP_DATA_L: begin 
+        WAIT_SNOOP_DATA_L: begin
             if (~cd_empty_i) begin
                 data_next = cd_data_i;
                 cd_pop_o = 1'b1;
@@ -228,7 +228,7 @@ always_comb begin
                 if (snoop_r == 4'b0010) begin
                     if(cr_response_i[2] == 1'b1) begin // if we got dirty data and snoop was a readClean
                         l_state_next = WRITE_BACK_L;
-                    end 
+                    end
                     else begin
                         l_state_next = SET_INFO_L;
                     end

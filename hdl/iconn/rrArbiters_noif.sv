@@ -9,7 +9,7 @@ module rrArb_AR_noif #(
 
     // AR channels input
     output logic [N_CPU-1:0] ar_ready_i,
-    
+
     input [N_CPU-1:0][ID_WIDTH-1:0]     ar_id_i,
     input [N_CPU-1:0][ADDR_WIDTH-1:0]   ar_addr_i,
     input [N_CPU-1:0][7:0]  ar_len_i,
@@ -22,7 +22,7 @@ module rrArb_AR_noif #(
 
     // AR channel output
     input ar_ready_o,
-    
+
     output logic [ID_WIDTH-1:0]     ar_id_o,
     output logic [ADDR_WIDTH-1:0]   ar_addr_o,
     output logic [7:0]  ar_len_o,
@@ -42,7 +42,7 @@ module rrArb_AR_noif #(
     logic [2*N_CPU-1:0]    p_tmp;
     logic [N_CPU-1:0]      mblock_n [N_CPU-1:0];
 
-    // gIdentifier - 
+    // gIdentifier -
     logic [$clog2(N_CPU):0]  gIdTmp [N_CPU-1:0];
     logic [$clog2(N_CPU):0]  gId;
 
@@ -50,7 +50,7 @@ module rrArb_AR_noif #(
 
     assign grant_vec = g_r & {N_CPU{ar_ready_o}};
 
-    generate 
+    generate
         for(genvar i=0;i<N_CPU;i=i+1) begin
             assign req_i[i] = ar_valid_i[i];
             assign ar_ready_i[i] = grant_vec[i] & req_i[i];
@@ -93,7 +93,7 @@ module rrArb_AR_noif #(
         if(!resetn) begin
             g_r<='0;
             p_r<=PRIO_DEF;
-        end	
+        end
         else begin
             g_r<=g_n;
             //if (ar_valid_o & ar_ready_o)
@@ -113,7 +113,7 @@ module rrArb_AR_noif #(
         for(genvar k=0;k<N_CPU;k=k+1)
             assign g_n[k] = (req_i[k] & ~|(req_i & mblock_n[k]));
     endgenerate
-    
+
     // mblock - blockage matrix
     assign p_tmp={p_r,p_r};
     generate
@@ -127,7 +127,7 @@ module rrArb_AR_noif #(
                 else if(i>j)
                     assign mblock_n[i][j]= |p_tmp[i+1+:N_CPU-(i-j)] ? 1:0;
     endgenerate
-    
+
 endmodule
 
 module rrArb_AW_W_noif #(
@@ -157,7 +157,7 @@ module rrArb_AW_W_noif #(
     input [N_CPU-1:0] w_last_i,
     input [N_CPU-1:0][STRB_WIDTH-1:0]  w_strb_i,
     input [N_CPU-1:0][DATA_WIDTH-1:0]  w_data_i,
-    
+
     // AW channel output
     input aw_ready_o,
 
@@ -187,7 +187,7 @@ module rrArb_AW_W_noif #(
     logic [2*N_CPU-1:0]    p_tmp;
     logic [N_CPU-1:0]      mblock_n [N_CPU-1:0];
 
-    // gIdentifier - 
+    // gIdentifier -
     logic [$clog2(N_CPU):0]  gIdTmp [N_CPU-1:0];
     logic [$clog2(N_CPU):0]  gId, gId_w_r, gId_w_next;
 
@@ -197,7 +197,7 @@ module rrArb_AW_W_noif #(
 
     assign aw_grant_vec = aw_grant_r & {N_CPU{aw_ready_o}};
 
-    generate 
+    generate
         for(genvar i=0;i<N_CPU;i=i+1) begin
             assign req_i[i] = aw_valid_i[i];
             assign aw_ready_i[i] = aw_grant_vec[i] & req_i[i];
@@ -328,7 +328,7 @@ module rrArb_AW_W_noif #(
                 else if(i>j)
                     assign mblock_n[i][j]= |p_tmp[i+1+:N_CPU-(i-j)] ? 1:0;
     endgenerate
-    
+
 endmodule
 
 
@@ -365,7 +365,7 @@ module rrArb_CR_CD_noif #(
     output logic [DATA_WIDTH-1:0] cd_data_o
     );
 
-    
+
     logic [N_CPU-1:0] req_i;
 
     logic [N_CPU-1:0]      cr_grant_r, cr_grant_next, cd_grant_r, cd_grant_next, cr_grant_vec;
@@ -374,7 +374,7 @@ module rrArb_CR_CD_noif #(
     logic [2*N_CPU-1:0]    p_tmp;
     logic [N_CPU-1:0]      mblock_n [N_CPU-1:0];
 
-    // gIdentifier - 
+    // gIdentifier -
     logic [$clog2(N_CPU):0]  gIdTmp [N_CPU-1:0];
     logic [$clog2(N_CPU):0]  gId, gId_cd_r, gId_cd_next;
 
@@ -384,7 +384,7 @@ module rrArb_CR_CD_noif #(
 
     assign cr_grant_vec = cr_grant_r & {N_CPU{cr_ready_o}};
 
-    generate 
+    generate
         for(genvar i=0;i<N_CPU;i=i+1) begin
             assign req_i[i] = cr_valid_i[i];
             assign cr_ready_i[i] = cr_grant_vec[i] & req_i[i];
@@ -486,7 +486,7 @@ module rrArb_CR_CD_noif #(
         for(genvar k=0;k<N_CPU;k=k+1)
             assign cr_grant_next[k] = (req_i[k] & ~|(req_i & mblock_n[k])) & ~recv_cd;
     endgenerate
-    
+
     // mblock - blockage matrix
     assign p_tmp={p_r,p_r};
     generate
@@ -500,5 +500,5 @@ module rrArb_CR_CD_noif #(
                 else if(i>j)
                     assign mblock_n[i][j]= |p_tmp[i+1+:N_CPU-(i-j)] ? 1:0;
     endgenerate
-    
+
 endmodule

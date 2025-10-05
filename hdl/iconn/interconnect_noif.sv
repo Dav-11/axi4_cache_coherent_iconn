@@ -27,7 +27,7 @@ module iconn_noif (
 
     //=============== AR CHANNEL ===============
     output logic [N_CPU-1:0] ar_ready,
-    
+
     input [N_CPU-1:0][ID_WIDTH-1:0]     ar_id,
     input [N_CPU-1:0][ADDR_WIDTH-1:0]   ar_addr,
     input [N_CPU-1:0][7:0]  ar_len,
@@ -43,7 +43,7 @@ module iconn_noif (
     output logic [N_CPU-1:0][RESP_WIDTH-1:0]  r_resp,
     output logic [N_CPU-1:0][ID_WIDTH-1:0]    r_id,
     output logic [N_CPU-1:0][DATA_WIDTH-1:0]  r_data,
-    
+
     input [N_CPU-1:0] r_ready,
 
 //=============== AW CHANNEL ===============

@@ -31,7 +31,7 @@ module fixedArb_dir_mem (
     logic [2*NUM_MASTER-1:0]    p_tmp;
     logic [NUM_MASTER-1:0]      mblock_n [NUM_MASTER-1:0];
 
-    // gIdentifier - 
+    // gIdentifier -
     logic [$clog2(NUM_MASTER):0]  gIdTmp [NUM_MASTER-1:0];
     logic [$clog2(NUM_MASTER):0]  gId;
 
